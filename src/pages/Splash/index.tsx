@@ -6,9 +6,8 @@ const Splash = withPresenter(() => {
   return (
     <div className="h-dvh p-5 flex flex-col items-center justify-center">
       <div className="h-full flex flex-col flex-grow items-center justify-center">
-        <img
-          src="/assets/images/icon_gik_without_words.svg"
-          className="w-[25rem]"
+        <div
+          className="w-[25rem] h-40"
         />
 
         <LoaderPinwheelIcon
@@ -22,15 +21,6 @@ const Splash = withPresenter(() => {
         <div className="flex flex-col self-end">
           <span>
             Build {import.meta.env.VITE_APP_VERSION}
-          </span>
-          <span>
-            &copy; <a
-              href="https://garudainfinity.com"
-              target="_blank"
-              className="hover:underline"
-            >
-              Garuda Infinity Kreasindo
-            </a>
           </span>
         </div>
       </div>

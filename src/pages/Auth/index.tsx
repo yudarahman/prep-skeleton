@@ -44,9 +44,8 @@ const Auth = withPresenter(({ data, actions }) => {
             <form onSubmit={handleSubmit}>
               <div className="p-5 self-center bg-black rounded-lg bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 border-transparent lg:w-[20rem]">
                 <div className="grid grid-cols-1 gap-y-3">
-                  <img
-                    src="/assets/images/icon_gik_without_words.svg"
-                    className="w-[10rem] mx-auto"
+                  <div
+                    className="w-[10rem] h-40 mx-auto"
                   />
                   {
                     isError && (

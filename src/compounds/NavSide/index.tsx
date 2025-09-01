@@ -20,10 +20,8 @@ const NavSide = withPresenter(({ data, actions }) => {
   
   return (
     <div className={`h-full min-w-[12rem] bg-black backdrop-blur rounded-lg bg-opacity-10 ${className}`}>
-      <img
-        src="/assets/images/icon_gik_without_words.svg"
-        alt="navigation-icon"
-        className="w-[2.5rem] my-5 self-center"
+      <div
+        className="w-[2.5rem] h-[2.5rem] my-5 self-center"
       />
 
       {

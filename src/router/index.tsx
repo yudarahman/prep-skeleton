@@ -9,6 +9,7 @@ import RoleFormPage from '@/pages/Setting/Role/Form';
 import RolePermissionFormPage from '@/pages/Setting/Role/PermissionForm';
 import UserPage from '@/pages/Setting/User';
 import UserFormPage from '@/pages/Setting/User/Form';
+import AzureLoginRedirect from '@/pages/AuthAzure';
 
 const routes = [
   {
@@ -22,6 +23,10 @@ const routes = [
   {
     path: 'login',
     element: <AuthPage />
+  },
+  {
+    path: 'auth/login',
+    element: <AzureLoginRedirect />
   },
   {
     path: 'dashboard',

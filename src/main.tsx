@@ -11,6 +11,12 @@ import TitleProvider from '@/contexts/TitleProvider';
 import { Toaster } from '@/components/ui/toaster';
 
 import App from './App.tsx';
+import AzureProvider from './contexts/AzureProvider/azure-provider.tsx';
+
+// TODO: Enable AD login
+// import { initAd } from './services/azure/index.ts';
+
+// initAd();
 
 ReactDOM
   .createRoot(document.getElementById('root')!)
@@ -19,7 +25,9 @@ ReactDOM
       <BrowserRouter>
         <Provider store={store}>
           <TitleProvider>
-            <App />
+            <AzureProvider>
+              <App />
+            </AzureProvider>
           </TitleProvider>
           <Toaster />
         </Provider>

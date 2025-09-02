@@ -104,6 +104,4 @@ Kami sangat terbuka terhadap kontribusi dari siapapun! Jika rekan-rekan menemuka
 - [🐛 Open an Issue][3]
 
 <br>
-<div align="center">
-Built with ❤️ by the <a href="https://garudainfinity.com">Garuda Infinity</a> team.
 

@@ -24,30 +24,30 @@ const withPresenter: BaseWithPresenter<
   const PresenterPage: FC = () => {
     const navigate = useNavigate();
 
-    const checkIfUserAuthenticated = async () => {
-      try {
-        await generateTableSeeder();
-        const { value } = await db.getData(DATABASE_KEY.AUTH) as DDocumentType<AAuthResponse>;
-
-        if (!isEmpty(value.token)) {
-          navigate('/dashboard');
-
-          return;
-        }
-
-        navigate('/login');
-      } catch (err) {
-        if (err instanceof DatabaseDocumentNotFoundError) {
-          navigate('/login');
-        }
-      }
-    };
-
     useEffect(() => {
+      const checkIfUserAuthenticated = async () => {
+        try {
+          await generateTableSeeder();
+          const { value } = await db.getData(DATABASE_KEY.AUTH) as DDocumentType<AAuthResponse>;
+
+          if (!isEmpty(value.token)) {
+            navigate('/dashboard');
+
+            return;
+          }
+
+          navigate('/login');
+        } catch (err) {
+          if (err instanceof DatabaseDocumentNotFoundError) {
+            navigate('/login');
+          }
+        }
+      };
+
       checkIfUserAuthenticated()
         .then(/* Nothing here is expected */)
         .catch(/* Nothing here is expected */);
-    }, []);
+    }, [navigate]);
 
     return callback({
       data: { ...initialState },
